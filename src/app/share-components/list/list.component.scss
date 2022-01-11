@@ -1,0 +1,16 @@
+ion-grid {
+  text-align: center;
+  ion-row {
+    margin: 1.5rem auto;
+
+    ion-col {
+      font-size: 13px;
+      text-align: center;
+      font-weight: 600;
+      white-space: pre;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

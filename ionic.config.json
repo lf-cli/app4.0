@@ -1,0 +1,7 @@
+{
+  "name": "baseapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
