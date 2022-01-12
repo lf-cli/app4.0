@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ToastService } from '../share_service/service/toast.service';
+import { ToastService } from '../shareService/service/toast.service';
 import { Router } from '@angular/router';
-import { HttpserviceService } from '../services/httpservice.service';
+import { HttpserviceService } from '../http/httpservice.service';
+import { updateService } from '../shareService/service/autoUpdate';
 import { Platform } from '@ionic/angular';
-import { PublicProvider } from '../../providers/public/public';
+// import { PublicProvider } from '../../providers/public/public';
 
 interface User {
   password: string;
@@ -27,11 +28,11 @@ export class LoginPage implements OnInit {
     private router: Router,
     private http: HttpserviceService,
     private platform: Platform,
-    private PlublicPro: PublicProvider
+    private updateService: updateService
   ) {
     //防止用户直接杀掉软件
     localStorage.removeItem('historyParams');
-    this.PlublicPro.autoUpdateApp();
+    this.updateService.autoUpdateApp();
     this.platform.backButton.subscribe(() => {
       if (this.router.url == '/') {
         navigator['app'].exitApp();

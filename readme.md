@@ -36,4 +36,4 @@ jarsigner -verbose -keystore demo.keystore -signedjar demo.apk platforms/android
 
 ### TODO
 
-整合一下 service 以及一些公共方法 组件
+以及一些公共方法 组件

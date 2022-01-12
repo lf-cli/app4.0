@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
-// eslint-disable-next-line @typescript-eslint/naming-convention
 declare let AMapLoader;
 
 @Injectable()
 export class AmapService {
-  // eslint-disable-next-line @typescript-eslint/naming-convention
   AMap: any;
 
   constructor() {}
